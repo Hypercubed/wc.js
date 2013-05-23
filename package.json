@@ -1,0 +1,33 @@
+{
+  "name": "wc-lazy",
+  "version": "0.0.1",
+  "description": "Word Count - Lazy",
+  "homepage": "",
+  "keywords": [
+    "large files"
+  ],
+  "author": "J. Harshbarger <> (https://github.com/hypercubed)",
+  "maintainers": [
+    "J. Harshbarger <> (https://github.com/hypercubed)"
+  ],
+  "contributors": [
+    "J. Harshbarger <> (https://github.com/hypercubed)"
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "lazy": "~1.0.11",
+    "commander": "~1.1.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.10.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  }
+}
