@@ -46,7 +46,7 @@ wc(reader, options, callback);
 ## Running tests
 
 ```
-mocha -R list
+npm test
 ```
 
 or one of these:
