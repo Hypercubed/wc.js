@@ -22,6 +22,8 @@
 		var l = 0, w= 0, c = 0, L = 0;  // lines, words, and chars count;
 		var wl = 0, ll = 0;				// word and line length		
 		var L = 0;						// longest line
+		
+		var LL = ''
 
 		var _count = function(data) {
 				debug &&
@@ -31,6 +33,8 @@
 				
 				var n = data.length;
 				if (opts.bytes) c += n;
+				//if (opts.lines) l += (data.match(/\n/g) || '').length;
+				//if (opts.words) w += (data.match(/[\n\s\t]+/g) || '').length;
 
 				for(var i = 0; i < n ; i++) { 
 					var ch = data[i];
@@ -41,11 +45,12 @@
 							l++;
 						} else {
 							ll++;
-						}					
+						}
 						wl = 0;
 					} else {
 						if (!wl) w++;
 						wl++;
+						ll++;
 					}
 					
 					if (opts.maxLineLength) L = Math.max(ll, L);				
