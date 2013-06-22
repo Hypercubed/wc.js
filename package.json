@@ -1,6 +1,6 @@
 {
   "name": "wc-lazy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Word Count - Lazy",
   "homepage": "",
   "keywords": [
@@ -13,6 +13,9 @@
   "contributors": [
     "J. Harshbarger <> (https://github.com/hypercubed)"
   ],
+  "bin": {
+    "wc.js": "./wc.js"
+  },
   "bugs": {
     "url": ""
   },

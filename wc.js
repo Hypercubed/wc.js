@@ -7,10 +7,12 @@ var debug = false;
 
 var wc = require('./wc-lazy.js').wcStream;
 var program = require('commander');
+var fs = require('fs');
+var path = require('path')
 
 program
-  .version('0.0.1')
-  .option('-c, --bytes', 'print the byte counts', false)			// Todo: need to respect these
+  .version('0.0.2')
+  .option('-c, --bytes', 'print the byte counts', false)
   .option('-w, --words', 'print the newline counts', false)
   .option('-l, --lines', 'print the word counts', false)
   .option('-L, --max-line-length', 'print the length of the longest line', false)		// Todo

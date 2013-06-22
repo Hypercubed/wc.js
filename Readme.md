@@ -2,13 +2,17 @@
 
 Gets newline, word, and byte counts from a stream.  Designed to match output fron Unix/Linux wc.  Can be used as a library or from the command line.
 
-## Installation
+## Installation from git
 
 ```
 git clone https://github.com/Hypercubed/wc-lazy.git
 cd wc-lazy
 npm install
 ```
+
+## Installation for NPM
+
+pending
 
 ## Usage from the command line
 
@@ -37,6 +41,20 @@ gunzip -c filename | ./wc.js
 ```
 var reader = fs.createReadStream(filepath, {"encoding": 'utf-8', "flags": 'r', "fd": null});
 wc(reader, options, callback);
+```
+
+## Running tests
+
+```
+mocha -R list
+```
+
+or one of these:
+
+```
+mocha -R list -g lorem
+mocha -R list -g big
+mocha -R list -g strange
 ```
 
 ## License
