@@ -18,7 +18,7 @@ dosPath = path.join(__dirname,'/');
 
 describe('wc-lazy',function() {
 
-	var files = [ 'lorem.txt' ];  // Todo: generate and test large file
+	var files = [ 'lorem.txt', 'big.txt', 'strange.txt' ];  // Todo: generate and test large file
 	
 	files.forEach(function(filename) {
 		var gz = (filename.split('.').pop() == 'gz');
