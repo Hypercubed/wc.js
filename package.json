@@ -1,6 +1,6 @@
 {
   "name": "wc.js",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "wc.js - print the number of bytes, words, and lines in files",
   "homepage": "https://github.com/Hypercubed/wc.js",
   "keywords": [

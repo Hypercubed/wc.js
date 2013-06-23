@@ -1,6 +1,6 @@
 ## Description
 
-Gets newline, word, and byte counts from a stream.  Designed to match output fron Unix/Linux wc.  Can be used as a library or from the command line.
+Gets newline, word, and byte counts from a stream.  Designed to match output from Unix/Linux wc.  Can be used as a library or from the command line.
 
 ## Installation from git
 
@@ -18,9 +18,9 @@ npm install -g wc.js
 
 ## Usage from the command line
 
-Prints newline, word, and byte counts froma file, and a total line if more than one file is specified. With no FILE, or when FILE is -, read standard input.
+Prints newline, word, and byte counts from a file, and a total line if more than one file is specified. With no filename, or when filename is -, read standard input.
 
-`./bin/wc.js [options] [filename]`
+`wc.js [options] [filename]`
 
 Options:
 
@@ -31,11 +31,11 @@ Options:
     -l, --lines            print the word counts
     -L, --max-line-length  print the length of the longest line
 
-## Should work on linux (fails on cygwin due to piping issue)
+## Should work on Linux (fails on Cygwin due to piping issue)
 
 ```
-cat filename | ./bin/wc.js
-gunzip -c filename | ./bin/wc.js
+cat filename | wc.js
+gunzip -c filename | wc.js
 ```
 
 ## Installation from NPM as a library
@@ -47,9 +47,27 @@ npm install wc.js
 ## Usage through API
 
 ```
-var wc = require('wc.js').wcStream;
+var wc = require('wc.js');
 var reader = fs.createReadStream(filepath, {"encoding": 'utf-8', "flags": 'r', "fd": null});
+wc.wcStream(reader, callback);
+```
+
+An optional options object is also accepted.
+
+```
+var options = { lines: true, maxLineLength: true }
 wc(reader, options, callback);
+```
+
+Options:
+
+```
+{
+	lines: true/false;
+	bytes: true/false;
+	words: true/false;
+	maxLineLength: true/false;
+}
 ```
 
 ## Running tests
