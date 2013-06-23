@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var wc = require('../wc-lazy.js').wcStream;
+var wc = require('../').wcStream;
 
 var path = require('path'), 
 	fs = require('fs'),

@@ -1,7 +1,7 @@
 {
-  "name": "wc-lazy",
+  "name": "wc.js",
   "version": "0.0.2",
-  "description": "Word Count - Lazy",
+  "description": "wc.js - print the number of bytes, words, and lines in files",
   "homepage": "",
   "keywords": [
     "large files"
@@ -13,8 +13,9 @@
   "contributors": [
     "J. Harshbarger <> (https://github.com/hypercubed)"
   ],
+  "main": "./index.js",
   "bin": {
-    "wc.js": "./wc.js"
+    "wc.js": "./bin/wc.js"
   },
   "bugs": {
     "url": ""
