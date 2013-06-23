@@ -1,28 +1,31 @@
 {
   "name": "wc.js",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "wc.js - print the number of bytes, words, and lines in files",
-  "homepage": "",
+  "homepage": "https://github.com/Hypercubed/wc.js",
   "keywords": [
-    "large files"
+    "large files", "wc", "word count"
   ],
-  "author": "J. Harshbarger <> (https://github.com/hypercubed)",
+  "author": "J. Harshbarger (https://github.com/hypercubed)",
   "maintainers": [
-    "J. Harshbarger <> (https://github.com/hypercubed)"
+    "J. Harshbarger (https://github.com/hypercubed)"
   ],
   "contributors": [
-    "J. Harshbarger <> (https://github.com/hypercubed)"
+    "J. Harshbarger (https://github.com/hypercubed)"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Hypercubed/wc.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hypercubed/wc.js/issues"
+  },
   "main": "./index.js",
   "bin": {
     "wc.js": "./bin/wc.js"
   },
-  "bugs": {
-    "url": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
+  "engines": {
+    "node": ">= 0.4.x"
   },
   "dependencies": {
     "commander": "~1.1.1"

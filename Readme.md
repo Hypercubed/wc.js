@@ -10,15 +10,17 @@ cd wc-lazy
 npm install
 ```
 
-## Installation for NPM
+## Installation from NPM for command line
 
-pending
+```
+npm install -g wc.js
+```
 
 ## Usage from the command line
 
 Prints newline, word, and byte counts froma file, and a total line if more than one file is specified. With no FILE, or when FILE is -, read standard input.
 
-`./wc.js [options] [filename]`
+`./bin/wc.js [options] [filename]`
 
 Options:
 
@@ -32,13 +34,20 @@ Options:
 ## Should work on linux (fails on cygwin due to piping issue)
 
 ```
-cat filename | ./wc.js
-gunzip -c filename | ./wc.js
+cat filename | ./bin/wc.js
+gunzip -c filename | ./bin/wc.js
+```
+
+## Installation from NPM as a library
+
+```
+npm install wc.js
 ```
 
 ## Usage through API
 
 ```
+var wc = require('wc.js').wcStream;
 var reader = fs.createReadStream(filepath, {"encoding": 'utf-8', "flags": 'r', "fd": null});
 wc(reader, options, callback);
 ```
