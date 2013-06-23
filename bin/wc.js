@@ -18,7 +18,7 @@ var wc = require('../').wcStream;
 var cwd = process.cwd()
 
 program
-  .version('0.0.2')
+  .version('0.1.1')
   .usage('[options] [files]')
   .option('-c, --bytes', 'print the byte counts', false)
   .option('-w, --words', 'print the newline counts', false)
