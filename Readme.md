@@ -5,9 +5,10 @@ Gets newline, word, and byte counts from a stream.  Designed to match output fro
 ## Installation from git
 
 ```
-git clone https://github.com/Hypercubed/wc-lazy.git
-cd wc-lazy
+git clone https://github.com/Hypercubed/wc.js.git
+cd wc.js
 npm install
+npm link
 ```
 
 ## Installation from NPM for command line

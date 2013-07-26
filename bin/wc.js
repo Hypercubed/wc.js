@@ -17,6 +17,8 @@ var wc = require('../').wcStream;
 //
 var cwd = process.cwd()
 
+program._name = 'wc.js';
+
 program
   .version('0.1.1')
   .usage('[options] [files]')
@@ -26,14 +28,14 @@ program
   .option('-L, --max-line-length', 'print the length of the longest line', false)		// Todo
   .parse(process.argv);
   
-program.name = 'wc.js';
-
 var files = program.args;
-if (!files.length) files.push('');
 
 var results = [];
+if (!files.length) files.push('');
 
-var getStream = function(filename) {
+files.forEach(countFile);
+
+function getStream(filename) {
 	if (filename == "-" || filename == "") {
 		debug && console.log('stdin');
 
@@ -51,7 +53,7 @@ var getStream = function(filename) {
 	return reader;
 }
 
-var print = function(counts, filename) {
+function print(counts, filename) {
 
 	var output = counts
 		.map(function(d) {
@@ -62,7 +64,7 @@ var print = function(counts, filename) {
 	console.log(output+' '+filename);
 }
 
-var showTotal = function() {
+function showTotal() {
 	var total = [];
 	
 	results.forEach(function(data) {
@@ -74,7 +76,7 @@ var showTotal = function() {
 	print(total, 'total');
 }
 
-var countFile = function(filename) {
+function countFile(filename) {
 	debug && 
 		console.log('countFile');
 
@@ -91,4 +93,27 @@ var countFile = function(filename) {
 
 }
 
-files.forEach(countFile);
+function pad(string, size, char) {
+	var i, pad, _i, _size;
+	if (char == null) {
+		char = ' ';
+	}
+	if (typeof string === 'number') {
+		_size = size;
+		size = string;
+		string = _size;
+	}
+	string = string.toString();
+	pad = '';
+	size = size - string.length;
+	for (i = _i = 0; 0 <= size ? _i < size : _i > size; i = 0 <= size ? ++_i : --_i) {
+		pad += char;
+	}
+	if (_size) {
+		return pad + string;
+	} else {
+		return string + pad;
+	}
+};
+
+
