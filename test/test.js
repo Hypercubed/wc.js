@@ -16,7 +16,7 @@ var assert = require("assert");
 bashPath = './test/';
 dosPath = path.join(__dirname,'/');
 
-describe('wc-lazy',function() {
+describe('wc-lazy', function() {
 
 	var files = [ 'lorem.txt', 'big.txt', 'strange.txt' ];  // Todo: generate and test large file
 	
