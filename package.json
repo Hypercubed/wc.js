@@ -3,9 +3,11 @@
   "version": "0.1.4",
   "description": "wc.js - print the number of bytes, words, and lines in files",
   "homepage": "https://github.com/Hypercubed/wc.js",
-  "license" : "MIT",
+  "license": "MIT",
   "keywords": [
-    "large files", "wc", "word count"
+    "large files",
+    "wc",
+    "word count"
   ],
   "author": "J. Harshbarger (https://github.com/hypercubed)",
   "maintainers": [
@@ -21,10 +23,14 @@
   "bugs": {
     "url": "https://github.com/Hypercubed/wc.js/issues"
   },
-  "main": "./index.js",
+  "main": "./lib/wc-lazy.js",
   "bin": {
     "wc.js": "./bin/wc.js"
   },
+  "files": [
+    "bin/*",
+    "lib/*"
+  ],
   "engines": {
     "node": ">= 0.4.x"
   },
@@ -32,9 +38,11 @@
     "commander": "~1.1.1"
   },
   "devDependencies": {
-    "mocha": "~1.10.0"
+    "mocha": "~1.10.0",
+    "semistandard": "^7.0.3"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha -R spec",
+    "check": "semistandard lib/*.js bin/*.js test/*.js"
   }
 }

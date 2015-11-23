@@ -1,1 +1,0 @@
-module.exports = require('./lib/wc-lazy.js');
