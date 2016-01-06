@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-var debug = false;
-
 // NPM Modules
 var program = require('commander');
 var fs = require('fs');
@@ -31,12 +26,12 @@ var files = program.args;
 var results = [];
 if (!files.length) files.push('');
 
-files.forEach(countFile);
+for (var i = 0; i < files.length; i++) {
+  countFile(files[i]);
+}
 
 function getStream (filename) {
   if (filename === '-' || filename === '') {
-    debug && console.log('stdin');
-
     var reader = process.stdin;
 
     // reader.pause();
@@ -73,8 +68,6 @@ function showTotal () {
 }
 
 function countFile (filename) {
-  debug && console.log('countFile');
-
   wc(getStream(filename), program, function (err, data) {
     if (err) { throw err; }
     results.push(data);
