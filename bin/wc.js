@@ -18,7 +18,7 @@ var cwd = process.cwd();
 program._name = 'wc.js';
 
 program
-  .version('0.1.1')
+  .version('0.1.5')
   .usage('[options] [files]')
   .option('-c, --bytes', 'print the byte counts', false)
   .option('-w, --words', 'print the newline counts', false)

@@ -2,7 +2,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Morbi convallis nibh massa, eu varius felis.
 Phasellus ultrices ligula sed odio ultricies egestas.
 
-   
+
 testing	tabs	here
 
 a
@@ -10,9 +10,9 @@ a
 
 Curabitur pretium magna in diam accumsan dignissim.
 Phasellus et tortor eu orci suscipit vehicula.
-Phasellus pulvinar mauris in purus consequat vel congue orci hendrerit. 
+Phasellus pulvinar mauris in purus consequat vel congue orci hendrerit.
 Pellentesque eget arcu magna, suscipit imperdiet eros. Pellentesque eget arcu magna, suscipit imperdiet eros.
 
 Also, this windows formatted EOLs.
 
-Note the lack or CR at EOF   Here ----->
+Note the lack of CR at EOF   Here ----->
